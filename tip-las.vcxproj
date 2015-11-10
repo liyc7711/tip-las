@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9D2BFEA7-0E01-4B28-A64D-B2C21641FA07}</ProjectGuid>
+    <RootNamespace>tiplas</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Formatting.cpp" />
+    <ClCompile Include="Las.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="tagging\Decoder.cpp" />
+    <ClCompile Include="tagging\Model.cpp" />
+    <ClCompile Include="tagging\Perceptron.cpp" />
+    <ClCompile Include="tagging\Sample.cpp" />
+    <ClCompile Include="utility\POSExtract.cpp" />
+    <ClCompile Include="utility\SentenceSplit.cpp" />
+    <ClCompile Include="utility\StringOperation.cpp" />
+    <ClCompile Include="utility\StringSplit.cpp" />
+    <ClCompile Include="utility\StringType.cpp" />
+    <ClCompile Include="utility\TextClassification.cpp" />
+    <ClCompile Include="utility\Tokenize.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Formatting.h" />
+    <ClInclude Include="Las.h" />
+    <ClInclude Include="tagging\Decoder.h" />
+    <ClInclude Include="tagging\Model.h" />
+    <ClInclude Include="tagging\Perceptron.h" />
+    <ClInclude Include="tagging\Sample.h" />
+    <ClInclude Include="tagging\Utils.h" />
+    <ClInclude Include="utility\head.h" />
+    <ClInclude Include="utility\POSExtract.h" />
+    <ClInclude Include="utility\SentenceSplit.h" />
+    <ClInclude Include="utility\StringOperation.h" />
+    <ClInclude Include="utility\StringSplit.h" />
+    <ClInclude Include="utility\StringType.h" />
+    <ClInclude Include="utility\TextClassification.h" />
+    <ClInclude Include="utility\Tokenize.h" />
+    <ClInclude Include="utility\utf8.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
