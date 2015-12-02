@@ -760,7 +760,7 @@ namespace Tagging
 			lastCandTags = lastTagset[-1];
 		}
 		candTags.clear();
-		set_intersection(tokenCandTags.begin(), tokenCandTags.end(), lastCandTags.begin(), lastCandTags.end(), back_inserter(candTags));
+		std::set_intersection(tokenCandTags.begin(), tokenCandTags.end(), lastCandTags.begin(), lastCandTags.end(), std::back_inserter(candTags));
 	}
 
 	double Model::FeaturesWeight(const std::vector< std::vector<int> >& features)
