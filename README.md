@@ -37,4 +37,4 @@ test表示程序执行测试命令，ws、pos、all分别表示选择测试分�
 
 [3]于洪志，李亚超，汪昆，冷本扎西.融合音节特征的最大熵藏文词性标注研究[J]. 2013年7月，第27卷第5期，第160-161页。
 #Q&A
-如果问题请联系：李亚超，Email:harry_lyc(at)foxmail.com
+如果问题请联系：Email:harry_lyc(at)foxmail.com
