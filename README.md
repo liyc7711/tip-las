@@ -16,7 +16,7 @@ TIP- LAS系统基于感知机算法构建，分为分词、词性标注两大模
 
 编译成功后，会在主目录文件夹下生成如下可执行程序: tip-las
 
-训练命令：tip-las train  ws/pos  input  model 
+## 训练命令：tip-las train  ws/pos  input  model 
 
 说明：
 
