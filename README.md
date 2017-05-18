@@ -22,7 +22,7 @@ TIP- LAS系统基于感知机算法构建，分为分词、词性标注两大模
 
 train表示程序执行训练命令，ws、pos分别表示选择训练分词或者是词性标注模型，input表示输入训练文件，model表示模型文件。当选择ws或pos时，后面的输入文件需要对应切分好的分词语料，或者是词性标注语料。
 
-测试命令：tip-las test  ws/pos/all  input  output
+## 测试命令：tip-las test  ws/pos/all  input  output
 
 说明：
 
