@@ -1,4 +1,3 @@
-# tip-las
 TIP-LAS: An open source toolkit for Tibetan word segmentation and part of speech tagging
 ===============
 TIP-LAS藏文分词标注系统使用文档
