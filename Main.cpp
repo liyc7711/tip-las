@@ -41,9 +41,9 @@ int main(int argc, char * argv[])
 	std::string type      =  "ws";
 	int iter              =  20;
 	int beamSize          =  8;
-    int nGram             =  2;
+        int nGram             =  2;
 	type   = argv[1];
-    task   = argv[2];
+        task   = argv[2];
 	input  = argv[3];
 	output = argv[4];
 	class Las* las = new Las();
