@@ -95,7 +95,7 @@ void Usage()
 void Copyrgiht()
 {
 	std::cout << "The Inistitute of Chinese Ethnic Information Technology (www.nlit.edu.cn)" << std::endl;
-	std::cout << "Copyright (C) 2011 - 2015." << std::endl;
+	std::cout << "Copyright (C) 2011 - 2017." << std::endl;
 	std::cout << "Version: 1.6, Last update: 2015-10-23." << std::endl;
-	std::cout << "Contact: liyc7711@gmail.com." << std::endl;
+	std::cout << "Contact: liyc7711(at)gmail(dot)com." << std::endl;
 }
