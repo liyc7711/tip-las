@@ -73,7 +73,7 @@ int main(int argc, char * argv[])
 			Usage();
 		}
 	}
-    else if (type == "dev")
+        else if (type == "dev")
 	{
 		if (!las->Development(input))
 		{
