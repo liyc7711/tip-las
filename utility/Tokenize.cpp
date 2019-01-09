@@ -387,7 +387,7 @@ namespace utility
 	参数   :
 	返回值 :
 	-------------------------------------------------
-	备注   : UTF8编码方式，对于藏文是纯藏文的文本输入，处理音节缩减问题。
+	备注   : UTF8编码方式，对于藏文是纯藏文的文本输入，对于音节缩减的问题予以全部切分
 	-------------------------------------------------
 	作者   ：Li Yachao
 	时间   ：2012-3-5,2015-11-6
@@ -403,131 +403,9 @@ namespace utility
 	}
 	void Tokenize::TibetanAll(const std::string & line,std::vector<std::string>& val)
 	{
-		std::string syllables[6];
-		syllables[0] = "\xe0\xbc\x8b";
-		syllables[1] = "\xe0\xbc\x8b";
-		syllables[2] = "\xe0\xbc\x8b";
-		syllables[3] = "\xe0\xbc\x8b";
-		syllables[4] = "\xe0\xbc\x8b";
-		syllables[5] = "\xe0\xbc\x8b";
-		std::vector<std::string> tmp;
-		Tibetan(line,tmp);
+
 		val.clear();
-		for(int i=0;i<tmp.size();i++)
-		{
-			bool add = false;
-			for(int j=0;j<6;j++)
-			{
-				if(syllables[j] == tmp[i])
-				{
-					add = true;
-					break;
-				}
-			}
-			if(add)
-			{
-				val.push_back(tmp[i]);
-			}
-			else
-			{
-				int index = -1;
-				bool sub = false;
-				for(int k=0;k<6;k++)
-				{
-					if(StringOperation::IsPostfix(tmp[i],syllables[k]))
-					{
-						index  = k;
-						break;
-					}
-				}
-				if((index >=0) && (index <=5))
-				{
-					int length = tmp[i].size() - syllables[index].size();
-					std::string sub = tmp[i].substr(0,length);
-					if(!sub.empty())
-					{
-						val.push_back(sub);
-					}
-					val.push_back(syllables[index]);
-				}
-				else
-				{
-					val.push_back(tmp[i]);
-				}
-			}
-		}
+		Tibetan(line,val);
 	}
-	void Tokenize::TibetanAll(const std::string & line,std::vector<std::pair<std::string,std::string> > & val)
-	{
-		std::string syllables[6];
-		syllables[0] = "\xe0\xbc\x8b";
-		syllables[1] = "\xe0\xbc\x8b";
-		syllables[2] = "\xe0\xbc\x8b";
-		syllables[3] = "\xe0\xbc\x8b";
-		syllables[4] = "\xe0\xbc\x8b";
-		syllables[5] = "\xe0\xbc\x8b";
-		std::vector<std::pair<std::string,std::string> > tmp;
-		Tibetan(line,tmp);
-		val.clear();
-		for(int i=0;i<tmp.size();i++)
-		{
-			if(tmp[i].second != "TB")
-			{
-				val.push_back(tmp[i]);
-				continue;
-			}
-			bool add = false;
-			for(int j=0;j<6;j++)
-			{
-				if(syllables[j] == tmp[i].first)
-				{
-					add = true;
-					break;
-				}
-			}
-			if(add)
-			{
-				std::pair<std::string,std::string>p;
-				p.first = tmp[i].first;
-				p.second = "TB";
-				val.push_back(p);
-			}
-			else
-			{
-				int index = -1;
-				bool sub = false;
-				for(int k=0;k<6;k++)
-				{
-					if(StringOperation::IsPostfix(tmp[i].first,syllables[k]))
-					{
-						index  = k;
-						break;
-					}
-				}
-				if((index >=0) && (index <=5))
-				{
-					int length = tmp[i].first.size() - syllables[index].size();
-					std::string sub = tmp[i].first.substr(0,length);
-					if(!sub.empty())
-					{
-						std::pair<std::string,std::string>p;
-						p.first = sub;
-						p.second = "TB";
-						val.push_back(p);
-					}
-					std::pair<std::string,std::string>p;
-					p.first = syllables[index];
-					p.second = "TB";
-					val.push_back(p);
-				}
-				else
-				{
-					std::pair<std::string,std::string>p;
-					p.first = tmp[i].first;
-					p.second = "TB";
-					val.push_back(p);
-				}
-			}
-		}
-	}
+
 }
