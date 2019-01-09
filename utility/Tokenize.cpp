@@ -404,12 +404,12 @@ namespace utility
 	void Tokenize::TibetanAll(const std::string & line,std::vector<std::string>& val)
 	{
 		std::string syllables[6];
-		            syllables[0] = "\xe0\xbc\x8b";
-					syllables[1] = "\xe0\xbc\x8b";
-					syllables[2] = "\xe0\xbc\x8b";
-					syllables[3] = "\xe0\xbc\x8b";
-					syllables[4] = "\xe0\xbc\x8b";
-					syllables[5] = "\xe0\xbc\x8b";
+		syllables[0] = "\xe0\xbc\x8b";
+		syllables[1] = "\xe0\xbc\x8b";
+		syllables[2] = "\xe0\xbc\x8b";
+		syllables[3] = "\xe0\xbc\x8b";
+		syllables[4] = "\xe0\xbc\x8b";
+		syllables[5] = "\xe0\xbc\x8b";
 		std::vector<std::string> tmp;
 		Tibetan(line,tmp);
 		val.clear();
@@ -460,12 +460,12 @@ namespace utility
 	void Tokenize::TibetanAll(const std::string & line,std::vector<std::pair<std::string,std::string> > & val)
 	{
 		std::string syllables[6];
-					syllables[0] = "\xe0\xbc\x8b";
-					syllables[1] = "\xe0\xbc\x8b";
-					syllables[2] = "\xe0\xbc\x8b";
-					syllables[3] = "\xe0\xbc\x8b";
-					syllables[4] = "\xe0\xbc\x8b";
-					syllables[5] = "\xe0\xbc\x8b";
+		syllables[0] = "\xe0\xbc\x8b";
+		syllables[1] = "\xe0\xbc\x8b";
+		syllables[2] = "\xe0\xbc\x8b";
+		syllables[3] = "\xe0\xbc\x8b";
+		syllables[4] = "\xe0\xbc\x8b";
+		syllables[5] = "\xe0\xbc\x8b";
 		std::vector<std::pair<std::string,std::string> > tmp;
 		Tibetan(line,tmp);
 		val.clear();
